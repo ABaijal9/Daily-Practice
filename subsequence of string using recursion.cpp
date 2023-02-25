@@ -11,12 +11,12 @@ void subsequenceofstring(char* input, char* output, int i , int j){
 
 	  //recursion case
 	  //1. without considering ith
-	  subsequenceofstring(input, output, i+1 , j);
+	  subsequenceofstring(input, output, i+1 , j); //we go till the end of input --> '\0'
 
 
 	  //2. with considering ith
 	  output[j] = input[i];
-	  subsequenceofstring(input, output, i+1 , j+1);
+	  subsequenceofstring(input, output, i+1 , j+1); //since value has been given to j so we do j+1 here & i+1 to move forward
 
 	  return;
 }
